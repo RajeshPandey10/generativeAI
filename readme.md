@@ -10,3 +10,6 @@ langchain components:
 
    2. Embedding Models (text input -> embedding model->[set of number which contain the meaning of text])
 
+2.prompts:
+   prompts are the input intructions or queries given to a model to guide its output.
+
