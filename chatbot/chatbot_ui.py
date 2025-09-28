@@ -199,6 +199,7 @@ st.markdown("""
         background: #ffffff;
         border: 1px solid #e5e5e5;
         border-radius: 10px;
+        text:#00000;
         padding: 1.5rem;
     }
     
@@ -235,7 +236,46 @@ st.markdown("""
     
     .stButton > button:hover {
         background: #333333 !important;
+        color: #ffffff !important;
         transform: translateY(-1px);
+    }
+    
+    /* Specifically target form submit buttons */
+    button[kind="formSubmit"] {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #000000 !important;
+        border-radius: 8px !important;
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        font-family: 'Inter', sans-serif !important;
+        min-width: 80px !important;
+    }
+    
+    button[kind="formSubmit"]:hover {
+        background: #333333 !important;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+    }
+    
+    /* Additional targeting for Streamlit form submit buttons */
+    div[data-testid="stForm"] button {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #000000 !important;
+    }
+    
+    div[data-testid="stForm"] button:hover {
+        background: #333333 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Direct button text targeting */
+    .stButton button p, .stButton button span, .stButton button div {
+        color: #ffffff !important;
     }
     
     .typing-indicator {
