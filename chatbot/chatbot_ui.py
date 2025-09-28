@@ -32,13 +32,9 @@ st.markdown("""
     
     .main-container {
         background: #ffffff;
-        border: 1px solid #e5e5e5;
-        border-radius: 12px;
-        padding: 2rem;
-        margin: 2rem auto;
-        max-width: 1000px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 0.6s ease-out;
+        padding: 1rem;
+        margin: 0;
+        max-width: 100%;
     }
     
     @keyframes fadeIn {
@@ -53,9 +49,9 @@ st.markdown("""
     
     .header-section {
         text-align: center;
-        padding: 1.5rem 0 2rem 0;
+        padding: 1rem 0;
         border-bottom: 1px solid #e5e5e5;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     
     .header-title {
@@ -83,9 +79,9 @@ st.markdown("""
     
     .stats-section {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
         justify-content: center;
-        margin: 2rem 0;
+        margin: 1rem 0;
         flex-wrap: wrap;
     }
     
@@ -116,17 +112,7 @@ st.markdown("""
         color: #666666;
         font-weight: 500;
     }
-    
-    .chat-container {
-        background: #ffffff;
-        border: 1px solid #e5e5e5;
-        border-radius: 10px;
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-        min-height: 400px;
-        max-height: 500px;
-        overflow-y: auto;
-    }
+
     
     .chat-message {
         margin-bottom: 1.2rem;
@@ -198,9 +184,8 @@ st.markdown("""
     .input-section {
         background: #ffffff;
         border: 1px solid #e5e5e5;
-        border-radius: 10px;
-        text:#00000;
-        padding: 1.5rem;
+        border-radius: 8px;
+        padding: 1rem;
     }
     
     .stTextInput > div > div > input {
@@ -428,18 +413,11 @@ if 'message_count' not in st.session_state:
 if 'is_typing' not in st.session_state:
     st.session_state.is_typing = False
 
-# Main container
-st.markdown('<div class="main-container">', unsafe_allow_html=True)
-
 # Header section
 st.markdown('''
 <div class="header-section">
     <div class="header-title">AI Assistant</div>
     <div class="header-subtitle">Clean & Professional Chat Interface</div>
-    <div class="header-description">
-        A minimalist AI assistant built for clear, focused conversations. 
-        Ask questions, get help, or explore ideas through intelligent dialogue.
-    </div>
 </div>
 ''', unsafe_allow_html=True)
 
@@ -556,11 +534,10 @@ if st.button("Clear Chat", key="clear_chat"):
     st.rerun()
 
 st.markdown('</div>', unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
 
 # Simple footer
 st.markdown('''
-<div style="text-align: center; padding: 1.5rem; color: #666666; font-size: 0.85rem;">
+<div style="text-align: center; padding: 0.5rem; color: #666666; font-size: 0.8rem;">
     Built with Streamlit • LangChain • OpenRouter
 </div>
 ''', unsafe_allow_html=True)
