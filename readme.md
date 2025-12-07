@@ -13,3 +13,6 @@ langchain components:
 2.prompts:
    prompts are the input intructions or queries given to a model to guide its output.
 
+3.structureed output
+   1.default model which have structure output-with_structure_output->call function and say data format...(three way for data format..using type dict..use pydantic,json_schema)
+   2. we have output parsers who cannot genererate the structured output default
